@@ -1,12 +1,13 @@
 function minDate(dates) {
   //write you code here
-	let minmDate = dates[0];
-	for (let i = 0; i < dates.length; i++) {
-		if(minmDateDa > dates[i]){
-			minmDate = dates[i]
-		}
-	}
-	return minmDate;
+	const dateObject = dates.map(date => new Date(date));
+	const minDateObj = new Date(Math.min(...dateObject));
+	const year = minDateObject.getFullYear();
+    const month = String(minDateObject.getMonth() + 1).padStart(2, '0');
+    const day = String(minDateObject.getDate()).padStart(2, '0');
+    
+    return `${year}/${month}/${day}`;
+	
 }
 
 // Do not change the code
