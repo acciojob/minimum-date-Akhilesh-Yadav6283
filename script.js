@@ -1,5 +1,12 @@
 function minDate(dates) {
   //write you code here
+	let minmDate = dates[0];
+	for (let i = 0; i < dates.length; i++) {
+		if(minmDateDa > dates[i]){
+			minmDate = dates[i]
+		}
+	}
+	return minmDate;
 }
 
 // Do not change the code
@@ -38,3 +45,4 @@ var dates = [
 ];
 
 alert(minDate(dates));
+
